@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Profile Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1#t {
+            color: #4CAF50;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .soil-profile {
+            flex: 1;
+            padding-right: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .soil-profile h2 {
+            color: #4CAF50;
+        }
+
+        .soil-profile ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .soil-profile ul li {
+            margin-bottom: 10px;
+        }
+
+        .form {
+            flex: 1;
+            padding-left: 20px;
+            border-left: 1px solid #ccc;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the form elements */
+        .form input[type="text"],
+        .form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+
+        .form button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .form button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="t">Crop Prediction</h1>
+    <div class="container">
+        <div class="soil-profile">
+            <h2>Know the Crop that is Perfect for your Soil</h2>
+            <p>
+            <ul>
+                <li>
+                    Step 1: Fill the values in the form.
+                </li>
+            <br>
+                <li>
+                    Step 2: Submit the form.<br>
+                </li>
+            <br>
+                <li>
+                    Step 3: Rest leave it to us...<br>
+                </li>
+            <br>
+            </ul>
+            <br>
+            <h4>The above is to make the farmer better understand the type of crop best suited for his land</h4>
+
+            </p>
+        </div>
+        <div class="form">
+            <form action="/result" method="POST">
+                <label for="nitrogen">Nitrogen: in (10mg-50mg)</label>
+                <input type="text" id="nitrogen" name="nitrogen" required><br>
+                <label for="phosphorus">Phosphorus: in (500mg-800mg)</label>
+                <input type="text" id="phosphorus" name="phosphorus" required><br>
+                <label for="potassium">Potassium: in (0ppm-200ppm)</label>
+                <input type="text" id="potassium" name="potassium" required><br>
+                <label for="temperature">Temperature: in ^C (10-50)</label>
+                <input type="text" id="temperature" name="temperature" required><br>
+                <label for="humidity">Humidity: in (%)</label>
+                <input type="text" id="humidity" name="humidity" required><br>
+                <label for="ph">pH Value:(1-11)</label>
+                <input type="text" id="ph" name="ph" required><br>
+                <label for="rainfall">Rainfall: in mm (100-10000)</label>
+                <input type="text" id="rainfall" name="rainfall" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
