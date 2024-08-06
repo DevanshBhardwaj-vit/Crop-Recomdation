@@ -1,6 +1,5 @@
 # Crop-Recomdation
-Link is given below
-The main aim of the above project is to suggest farmers the most suitable crop for their land based on the ML model
+The main aim of the above project is to suggest farmers the most suitable crop for their land based on the ML model applied by taking 1. pH , 2. Phosphorus , 3. Nitrogen , 4. Potassium such local parameters as input and trying to classify the new data points the users gives based.
 
 We have used Random Forest to Classify the Crops on the basis of input provided
 
